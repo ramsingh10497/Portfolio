@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React and Redux
+          Learn React and Redux and Making Project
         </a>
       </header>
     </div>
