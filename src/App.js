@@ -17,7 +17,7 @@ function App() {
         >
           Learn React and Redux and Making Project by some commits and adding some comments.
         </a>
-        <div>Fir se commit and</div>
+        <div>Fir se commit and fir se</div>
       </header>
     </div>
   );
