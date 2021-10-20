@@ -1,24 +1,70 @@
-import logo from './logo.svg';
 import './App.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+// import Particles from 'react-particles-js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import About from './components/About';
+import Projects from './components/Projects';
+import Contacts from './components/Contacts';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
+import Particles from 'react-particles-js';
+import Skills from './components/Skills';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React and Redux and Making Project by some commits and adding some comments.
-        </a>
-        <div>Fir se commit and fir se</div>
-      </header>
+    <>
+    <Particles
+          className="particles-canvas"
+    params={
+      {
+        Particles: {
+          number: {
+            density:{
+              enable: true,
+              value_area: 900
+            }
+          },
+          shape: {
+            type: "star",
+            stroke: {
+              width: 6,
+              color: "#f9ab00"
+            }
+          }
+        }
+      }
+    }
+     />
+    <Router>
+  
+     <Navbar />
+     <Switch>
+          <Route exact path="/">
+            <Header />
+          </Route>
+          {/* <Route path="/about">
+            <About />
+          </Route> */}
+          <Route path="/skills">
+            <Skills />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/contact">
+            <Contacts />
+          </Route>
+          <Route path="/resume">
+            <Resume />
+          </Route>
+        </Switch>
+     {/* <Header /> */}
+          <Footer />
+     </Router>
+     </>
     </div>
   );
 }
